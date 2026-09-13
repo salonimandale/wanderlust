@@ -1,0 +1,259 @@
+<!-- <!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Wanderlust</title> 
+</head> 
+<body> -->
+
+    <% layout("/layouts/boilerplate") %> 
+    
+    <div class="row"> 
+
+        <div class="col-8 offset-2"> 
+
+            <br/>
+            <br/> 
+
+            <h3>Create a new Listing</h3>
+
+            <form 
+                method="POST" 
+                action="/listings" 
+                class="needs-validation" 
+                novalidate 
+                enctype="multipart/form-data"
+            > 
+
+                <!-- TITLE -->
+
+                <div class="mb-3"> 
+
+                    <label for="title" class="form-label">
+                        Title
+                    </label> 
+
+                    <input 
+                        type="text" 
+                        name="listing[title]" 
+                        placeholder="Add a catchy title" 
+                        class="form-control" 
+                        required
+                    > 
+
+                    <div class="valid-feedback">
+                        Title looks good
+                    </div> 
+
+                    <div class="invalid-feedback">
+                        Please enter a title
+                    </div>
+
+                </div>
+
+
+                <!-- DESCRIPTION -->
+
+                <div class="mb-3"> 
+
+                    <label for="description" class="form-label">
+                        Description
+                    </label> 
+
+                    <textarea 
+                        name="listing[description]" 
+                        class="form-control" 
+                        required
+                    ></textarea> 
+
+                    <div class="invalid-feedback">
+                        Please enter a short description
+                    </div> 
+
+                </div>
+
+
+                <!-- IMAGE -->
+
+                <div class="mb-3"> 
+
+                    <label for="file" class="form-label">
+                        Upload Listing Image
+                    </label> 
+
+                    <input 
+                        type="file" 
+                        name="listing[image]" 
+                        class="form-control" 
+                        id="file"
+                        accept="image/png, image/jpeg, image/jpg"
+                        required
+                    > 
+
+                    <div class="invalid-feedback">
+                        Please upload an image
+                    </div>
+
+                </div>
+
+
+                <!-- PRICE + COUNTRY -->
+
+                <div class="row"> 
+
+                    <div class="mb-3 col-md-4"> 
+
+                        <label for="price" class="form-label">
+                            Price
+                        </label> 
+
+                        <input 
+                            type="number"
+                            name="listing[price]" 
+                            placeholder="1200" 
+                            class="form-control" 
+                            required
+                            min="0"
+                        >  
+
+                        <div class="invalid-feedback">
+                            Please enter a valid price
+                        </div> 
+
+                    </div>
+
+
+                    <div class="mb-3 col-md-8"> 
+
+                        <label for="country" class="form-label">
+                            Country
+                        </label> 
+
+                        <input 
+                            type="text" 
+                            name="listing[country]" 
+                            placeholder="India" 
+                            class="form-control" 
+                            required
+                        > 
+
+                        <div class="invalid-feedback">
+                            Please enter a valid country
+                        </div> 
+
+                    </div> 
+
+                </div>
+
+
+                <!-- LOCATION -->
+
+                <div class="mb-3"> 
+
+                    <label for="location" class="form-label">
+                        Location
+                    </label> 
+
+                    <input 
+                        type="text" 
+                        name="listing[location]" 
+                        placeholder="Jaipur, Rajasthan" 
+                        class="form-control" 
+                        required
+                    >  
+
+                    <div class="invalid-feedback">
+                        Please enter a valid location
+                    </div> 
+
+                </div>
+
+
+                <!-- CATEGORY -->
+
+                <div class="mb-3">
+
+                    <label for="category" class="form-label">
+                        Category
+                    </label>
+
+                    <select 
+                        name="listing[category]" 
+                        id="category" 
+                        class="form-select" 
+                        required
+                    >
+
+                        <option value="" selected disabled>
+                            Select a category
+                        </option>
+
+                        <option value="Trending">
+                            🔥 Trending
+                        </option>
+
+                        <option value="Rooms">
+                            🛏️ Rooms
+                        </option>
+
+                        <option value="Iconic Cities">
+                            🏙️ Iconic Cities
+                        </option>
+
+                        <option value="Mountains">
+                            ⛰️ Mountains
+                        </option>
+
+                        <option value="Castles">
+                            🏰 Castles
+                        </option>
+
+                        <option value="Amazing Pools">
+                            🏊 Amazing Pools
+                        </option>
+
+                        <option value="Camping">
+                            ⛺ Camping
+                        </option>
+
+                        <option value="Farms">
+                            🐄 Farms
+                        </option>
+
+                        <option value="Arctic">
+                            ❄️ Arctic
+                        </option>
+
+                    </select>
+
+                    <div class="invalid-feedback">
+                        Please select a category
+                    </div>
+
+                </div>
+
+
+                <!-- BUTTON -->
+
+                <br>
+                <br> 
+
+                <button class="btn btn-dark add-btn">
+                    Add
+                </button> 
+
+                <br>
+                <br>
+                <br>
+                <br>
+
+            </form> 
+
+        </div> 
+
+    </div>
+
+
+<!-- </body> 
+</html> -->
